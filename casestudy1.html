@@ -42,7 +42,7 @@
 
             <body>
                 <header classs="major">
-                    <h2>CPI Time Series Prediction Modeling</h2>
+                    <h4>CPI Time Series Prediction Modeling</h4>
                     <p class="intropara">
                         Growing up in America, I always wondered why the cost of items would continually grow and
                         decline in price.
@@ -70,6 +70,7 @@
                         people can use to determine whether they should continue investments among the market in the
                         short term scope.
                     </p>
+                    <h4>Problem statement</h4>
                     <p class="problempara">
                         For many consumers, they do not know that with changes in the consumer price index
                         there may be a ripple effect of changes onto other aspects of economic indicators
@@ -77,10 +78,11 @@
                         currencies which is often used in our everyday lives.
                         In this project, we aimed to solve the problem <b>"How can we accurately predict the behavior of
                             CPI [consumer price index] data from past data and
-                            other extraneous PPI [Producer Price Index] data?" </b>b>
+                            other extraneous PPI [Producer Price Index] data?" </b>
                     </p>
+                    <h4>My contribution</h4>
                     <p class="stepspara">
-                        Among this project, I spearheaded the work as Project lead for this project. All members equally
+                        Among this project, I spearheaded the work as <b>Project lead</b> for this project. All members equally
                         contributed, however, what makes project lead stand out is that I was in charge of crafting the
                         timeline
                         and steps needed for this particular project.
@@ -92,6 +94,7 @@
                         decided what to do as
                         a group collective.
                     </p>
+                    <h4>Data Findings</h4>
                     <p class="findingspara">
                         During data exploration, we noticed that all categories had a seasonal trend that would cause
                         dips
@@ -102,18 +105,43 @@
                         throughout major holidays such as Thanksgiving and Christmas where spikes were seen from holiday
                         shopping.
                         In this project, our team used a variety of different time series modeling techniques including
-                        VARIMA, SARIMA, Multiple Linear Regression, Ridge Regression.
+                        <b>VARIMA, SARIMA, Multiple Linear Regression, Ridge Regression</b>.
 
                         <br>
                         <br>
-                        [include brief descriptions of each models performance]
+                        Throughout the course of choosing our final model, we initially started with just simple linear regression.
+                        Linear regression is an easy and intuitive way of just adding weights to our respective features to determine
+                        a linear function to be used for our prediction. This proved to be a model that was overfit among our data.
+                        To combat the overfitting, we also looked into Lass/Ridge Regression since we could incorporate a new feature
+                        that would penalize features that were less important or had weights that shifted the outputs at a greater extent.
+
+                        <br>
+                        <br>
+                        However, looking into linear regression and Lasso/Ridge Regression, these models generated predictions based off
+                        of <b>correlating</b> features. In other words, they produced predictions as a result of relationships with other
+                        existing features. This led us to explore other specific time series modeling techniques. The ARIMA, also known as
+                        Auto Regressive Integrated Moving Average, model seemed to be one that also fit into what our goal of the project was.
+                        The benefit of using models geared towards time series data is that rather than predicting results based off other current
+                        features, these models would instead use <b>prior</b> data in order to <b>forecase</b> new data points. On top of this,
+                        criteria such as seasonality, residual information, or even overall trends could be shown easily with this model. 
+                        At this point, the ARIMA model seemed like one that we could use in our final predictions, but we ran into a problem
+                        where we had a variety of features to use, but the ARIMA model just takes in a select few, leaving other features to be
+                        forgotten and wasted. This led our team to decide upon the VARIMA model which adds in another aspect of treating 
+                        all our data features to be represented as vectors. By treating our features as vectors, this allows us to bring all the
+                        features into consideration when generating predictions and produce results that were more accurate rather than just
+                        simply using a handful of features.
                         <br>
                         <br>
 
-                        Accuracy of the VARIMA model proved to be the best among our predictions.
-                        (explain why this was the best model)
+                        As shown in the figure below, the VARIMA model produced results most accurate as compared to all others discussed.
+                        In regards to questions on why Multiple Linear Regression and Lasso/Ridge Regression was not used in our analysis is
+                        our interest in using a model geared towards <b>forecasting</b> our data using prior existing data rather than the need for
+                        present data of other features. This allows us to actually predict our data instead.
+                        <br>
+                        <img src = "images/model_results.jpg">
 
                     </p>
+                    <h4>Reflection and Next Steps</h4>
                     <p class="reflectionpara">
                         Our initial analysis discovered that trends in consumer behavior played a major aspect in the
                         respective behavior of CPI and also the market as well. When looking into this at a deeper

@@ -42,7 +42,7 @@
 
             <body>
                 <header classs="major">
-                    <h2>Spotify Songs Prediction</h2>
+                    <h4>Spotify Songs Prediction</h4>
                     <p class="intropara">
                         Spotify, a popular music streaming service, is an integral part of a vast major of the world's
                         population daily lives. Since the 2000's audio media seems to be everywhere
@@ -52,20 +52,23 @@
                         listening data. This personalized creation has been a stunning feature that many enjoy, but for
                         others, it may not always be the right taste in genre that users would listen to.
                         Even for me, there are oftentimes songs which I do not like. I wanted to explore this further
-                        and wondered why spotify would recommend songs whhich I do not listen to.
+                        and wondered why spotify would recommend songs which I do not listen to.
                         Being able to recommend good songs means that users will use a platform for longer since it
                         matches with their preference and they will be able to enjoy the application at a further
                         extent.
 
-                        It’s important to analyze and understand what makes Spotify’s recommender systems work and in
+                        <br>
+                        <br>
+                        It’s important to analyze and understand what makes <b>Spotify’s recommender systems</b> work and in
                         doing so, we also created a similar model to recommend music to users of our model as well.
                         We wanted to create a music prediction model that would recommend to users top songs on the top
-                        100 songs so that songs recommended would not just be random songs that they listen to
+                        100 songs so that songs recommended would not just be random songs that they listen to.
                         During the process of creating a prediction model means that we have to analyze specific trends
                         and features among musical pieces. Once we are able to correlate features and generalize them to
                         a users history, we can create a better prediction model as well.
 
                     </p>
+                    <h4>Project Goal</h4>
                     <p class="problempara">
                         Since Spotify's recommendation model was one that grabbed our attention, we wanted to break down
                         the this existing model so that we can understand it through replication
@@ -80,6 +83,7 @@
                         does, but rather from the top 100 songs
                         today instead.
                     </p>
+                    <h4>Problem Statement</h4>
                     <p class="stepspara">
                         In this project, I was a member among a total of 4 members where we all equally contributed.
                         As a project member I was not very focused on the modeling side of things, but rather focused
@@ -89,9 +93,20 @@
                         each machine learning algorithm to discuss with my team which to use for our predictions.
 
                     </p>
+                    <h4>Data Findings</h4>
                     <p class="findingspara">
                         Among our analysis, songs had a variety of different features and aspects that would influence
-                        the users preference
+                        the users preference. As shown in these barplots, pause behavior, shuffling behavior, and whether
+                        or not users paid for the streaming service had an impact on how they listened to music. These were
+                        also factors in how they ended up skipping songs as compared to those that listened to the song all
+                        the way through.
+                        
+                        <br>
+                        <br>
+                        <img src = "images/premium_eda_plot.png">
+                        <img src = "images/pause_eda_plot.png">
+                        <img src = "images/shuffle_eda_plot.png">
+                        <br>
                         We had to find out which features stood out most amongst those that listened to the same song.
                         This led us
                         to use Cosine similarity when finding songs that users may be interested in. A reason for why
@@ -106,8 +121,14 @@
 
 
                     </p>
+                    <h4>Reflection</h4>
                     <p class="reflectionpara">
                         Our project ran into many problems of space and time issues, but were able to combat them over the course of the project.
+                        The issue that we initially ran into was one of accessing the dataset. This dataset contained of over 64gb of user data,
+                        which contained a variety of information on a number of different users and music features. Song data was
+                        also given where there was information on bounciness, acousticness, beats, etc. All this information played a 
+                        factor in our model which was needed for our analysis. As a result, we had to incorporate the use of Pyspark
+                        which allowed us to sample smaller bits of our whole dataset to be used in training our model.
                         Given more time would look into how sequence of songs being played can affect the recommendation
                         that they get back.
 
